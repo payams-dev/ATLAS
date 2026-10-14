@@ -1,8 +1,98 @@
 [
-  {
-    "id": "outfit_001",
-    "name": "DEFAULT DAN",
-    "type": "OUTFIT",
-    "tags": ["tag1", "tag2", "tag3"]
-  }
+	{
+		"id": "outfit_001",
+		"name": "DEFAULT DAN",
+		"type": "SKIN",
+		"tags": [
+			"default",
+			"common",
+			"classic",
+			"OG"
+		],
+		"metadata": {
+			"rarity": "Common",
+			"seasonIntroduced": 1,
+			"set": "Default"
+		}
+	},
+	{
+		"id": "pickaxe_001",
+		"name": "DAN SMASHER",
+		"type": "PICKAXE",
+		"tags": [
+			"default",
+			"common",
+			"classic",
+			"OG"
+		],
+		"metadata": {
+			"rarity": "Common",
+			"seasonIntroduced": 1,
+			"set": "Default"
+		}
+	},
+	{
+		"id": "backbling_001",
+		"name": "DAN PACK",
+		"type": "BACK_BLING",
+		"tags": [
+			"default",
+			"common",
+			"classic",
+			"OG"
+		],
+		"metadata": {
+			"rarity": "Common",
+			"seasonIntroduced": 1,
+			"set": "Default"
+		}
+	},
+	{
+		"id": "wrap_001",
+		"name": "THE BASIC",
+		"type": "WRAP",
+		"tags": [
+			"default",
+			"common",
+			"classic",
+			"OG"
+		],
+		"metadata": {
+			"rarity": "Common",
+			"seasonIntroduced": 1,
+			"set": "Default"
+		}
+	},
+	{
+		"id": "glider_001",
+		"name": "DAN'S DEFAULT 'CHUTE",
+		"type": "GLIDER",
+		"tags": [
+			"default",
+			"common",
+			"classic",
+			"OG"
+		],
+		"metadata": {
+			"rarity": "Common",
+			"seasonIntroduced": 1,
+			"set": "Default"
+		}
+	},
+	{
+		"id": "emote_001",
+		"name": "DEFAULT SHUFFLE",
+		"type": "EMOTE",
+		"tags": [
+			"default",
+			"common",
+			"classic",
+			"OG"
+		],
+		"metadata": {
+			"rarity": "Common",
+			"seasonIntroduced": 1,
+			"set": "Default"
+		}
+	}
 ]
