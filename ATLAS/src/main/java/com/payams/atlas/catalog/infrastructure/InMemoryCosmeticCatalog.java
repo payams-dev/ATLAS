@@ -1,5 +1,6 @@
 package com.payams.atlas.catalog.infrastructure;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Map;
@@ -44,8 +45,10 @@ public class InMemoryCosmeticCatalog implements CosmeticCatalog {
 	 */
 	@Override
 	public Optional<CosmeticDefinition> findById(String id) {
-		if (id == null)
+		if (id == null) {
 			return Optional.empty();
+		}
+
 		return Optional.ofNullable(store.get(id));
 	}
 
@@ -54,9 +57,17 @@ public class InMemoryCosmeticCatalog implements CosmeticCatalog {
 	 */
 	@Override
 	public List<CosmeticDefinition> findByType(CosmeticType type) {
-		if (type == null)
+		if (type == null) {
 			return Collections.emptyList();
-		return store.values().stream().filter(c -> c.getType() == type).toList();
+		}
+
+		List<CosmeticDefinition> filteredList = new ArrayList<>();
+		for (CosmeticDefinition c : store.values()) {
+		    if (c.getType() == type) {
+		        filteredList.add(c);
+		    }
+		}
+		return filteredList;
 	}
 
 	/**

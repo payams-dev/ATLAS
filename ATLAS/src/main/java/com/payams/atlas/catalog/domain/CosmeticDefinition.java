@@ -4,6 +4,8 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * Represents an immutable catalog definition for a cosmetic item.
@@ -21,8 +23,9 @@ public class CosmeticDefinition {
 	/**
 	 * Constructs a new cosmetic definition with validation and defensive copying.
 	 */
-	public CosmeticDefinition(String id, String name, CosmeticType type, List<String> tags,
-			Map<String, Object> metadata) {
+	public CosmeticDefinition(@JsonProperty("id") String id, @JsonProperty("name") String name,
+			@JsonProperty("type") CosmeticType type, @JsonProperty("tags") List<String> tags,
+			@JsonProperty("metadata") Map<String, Object> metadata) {
 
 		if (id == null || id.isBlank()) {
 			throw new InvalidCosmeticException("Cosmetic ID cannot be null or blank.");
@@ -56,7 +59,7 @@ public class CosmeticDefinition {
 	public CosmeticType getType() {
 		return type;
 	}
-	
+
 	/**
 	 * Returns the name of the cosmetic.
 	 */
@@ -80,10 +83,15 @@ public class CosmeticDefinition {
 
 	@Override
 	public boolean equals(Object o) {
-		if (this == o)
+		if (this == o) {
 			return true;
-		if (o == null || getClass() != o.getClass())
+
+		}
+
+		if (o == null || getClass() != o.getClass()) {
 			return false;
+		}
+
 		CosmeticDefinition that = (CosmeticDefinition) o;
 		return Objects.equals(id, that.id) && Objects.equals(name, that.name) && type == that.type
 				&& Objects.equals(tags, that.tags) && Objects.equals(metadata, that.metadata);
